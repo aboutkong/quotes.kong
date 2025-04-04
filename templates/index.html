@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+</head>
+<body>
+  <h1>QUOTES</h1>
+  <a class="btn" href="/add">Tambahkan Quotes</a>
+  <div class="container>
+    <div class="quotes-list">
+        {% for quote, author in quotes %}
+          <div class="quote-card">
+              <p class="quote-text">"{{ quote }}"</p>
+              <p class="quote-author">-<em>{{ author }}</em></p>
+          </div>
+          {% endfor %}
+    </div>
+  </div>  
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tambah Quote</title>
+    <title>Quotes</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tambah Quote</h1>
+      <form method="POST">
+        <textarea
+          name="content"
+          required
+          placeholder="Tulis quote-nya di sini..."
+        ></textarea
+        ><br />
+        <input type="text" name="author" placeholder="Nama (opsional)" /><br />
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+    <a class="btn" href="/">Kembali ke daftar</a>
+  </body>
+</html>
