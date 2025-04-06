@@ -1,1 +1,12 @@
-web: gunicorn app:app
+{
+  "builds": [{
+    "src": "api/app.py",
+    "use": "@vercel/python"
+  }],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/app.py"
+    }
+  ]
+}
